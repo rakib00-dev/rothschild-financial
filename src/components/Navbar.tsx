@@ -81,6 +81,36 @@ const Navbar = () => {
     );
   };
 
+  // window onLoad Entry
+  const navBarFix = useRef<HTMLDivElement>(null);
+  const header_section = useRef(null);
+
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      if (navBarFix.current && header_section.current) {
+        navBarFix.current.style.top = '0';
+      }
+    });
+
+    // header NavBar onScroll
+    window.addEventListener('scroll', () => {
+      const scrollValue = window.scrollY;
+      if (scrollValue >= 82) {
+        if (navBarFix.current) {
+          navBarFix.current.style.top = '0';
+          navBarFix.current.style.position = 'relative';
+        }
+      } else {
+        if (navBarFix.current) {
+          navBarFix.current.style.top = '0';
+          navBarFix.current.style.position = 'fixed';
+        }
+      }
+    });
+  }, []);
+
   return (
     <>
       <motion.div
@@ -90,23 +120,28 @@ const Navbar = () => {
           delay: 0.2,
           type: 'spring',
         }}
-        className="mx-auto transition-all bg-white/60 w-full h-20 relative top-0 border-b-1  border-gray-200 z-20"
+        className={`mx-auto transition-all bg-white/60 w-full h-20 top-5 border-b-1 border-gray-200 z-20 `}
         id="navBarFix"
-        // ref={navBarFix}
+        ref={navBarFix}
       >
         <nav
           id="nav"
           className="relative flex justify-center items-center px-6 md:px-12 py-4 max-w-7xl border-b-1 border-gray-200 bg-white/60 p-4 w-full h-20 m-auto lg:py-0.5"
         >
           <ul className="flex justify-center mx-auto items-center gap-5">
-            {/* <NavLists /> */}
             <div
               // className={!isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
               onClick={() => {
                 // setIsNavOpen((prev) => !prev);
               }}
             >
-              <RiMenu3Fill className="text-3xl" />
+              <RiMenu3Fill className="text-3xl rotate-180" />
+            </div>
+            <div
+              className={false ? `block lg:hidden` : 'hidden lg:hidden'}
+              onClick={() => {}}
+            >
+              <RiCloseFill className="text-3xl" />
             </div>
           </ul>
 
@@ -136,14 +171,6 @@ const Navbar = () => {
           </div>
           <div id="language" className="flex gap-1 font-bold cursor-pointer">
             EN
-          </div>
-          <div
-            // className={isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
-            onClick={() => {
-              // setIsNavOpen((prev) => prev);
-            }}
-          >
-            <RiCloseFill className="text-3xl" />
           </div>
         </nav>
       </motion.div>
