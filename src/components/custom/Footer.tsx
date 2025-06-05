@@ -77,11 +77,19 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex justify-end gap-8">
-          <a href="" target="_blank" className="w-fit h-fit p-2">
-            <FaInstagram className="h-5 w-5" />
+          <a
+            href=""
+            target="_blank"
+            className="transition-all duration-300 w-fit h-fit p-2 hover:text-[#cc9f53]"
+          >
+            <FaInstagram className="h-6 w-6" />
           </a>
-          <a href="" target="_blank" className="w-fit h-fit p-2">
-            <FaLinkedinIn className="h-5 w-5" />
+          <a
+            href=""
+            target="_blank"
+            className="transition-all duration-300 w-fit h-fit p-2 hover:text-[#cc9f53]"
+          >
+            <FaLinkedinIn className="h-6 w-6" />
           </a>
         </div>
       </div>
