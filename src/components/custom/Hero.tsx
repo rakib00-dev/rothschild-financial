@@ -8,7 +8,7 @@ const Hero = () => {
     },
   };
   return (
-    <section className="relative mt-0 w-full max-w-7xl mx-auto">
+    <section className="relative mb-20 mt-0 w-full max-w-7xl mx-auto">
       <div
         className="relative h-full"
         style={{
