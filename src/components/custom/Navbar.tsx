@@ -134,7 +134,7 @@ const Navbar = () => {
         {menus.map((e) => (
           <a
             href=""
-            className="flex justify-between gap-10 items-center w-[400px] md:text-2xl"
+            className="transition-all duration-300 flex justify-between gap-10 items-center w-[400px] md:text-2xl menuLinkHover"
           >
             {e}
             <PiGreaterThanBold className="h-4 w-4" />

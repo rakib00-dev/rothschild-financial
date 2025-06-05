@@ -56,6 +56,20 @@ a {
   @apply translate-x-2.5 text-[var(--link-hover-color)];
 }
 
+/* navbar ⬇️ */
+.menuLinkHover:hover {
+  @apply text-[var(--footer-link)] translate-x-4;
+}
+
+/* .menuLinkHover::after {
+  content: '';
+  @apply flex justify-center items-center h-0.5 transition-all w-[0%] bg-[var(--footer-link)] duration-300;
+}
+
+.menuLinkHover:hover::after {
+} */
+/* navbar ⬆️ */
+
 /* Four complementary - section ⬇️*/
 #card:nth-child(1),
 #card:nth-child(2) {
