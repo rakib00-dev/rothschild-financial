@@ -100,15 +100,17 @@ const Navbar = () => {
       if (scrollValue >= 82) {
         if (navBarFix.current) {
           navBarFix.current.style.top = '0';
-          navBarFix.current.style.position = 'relative';
+          navBarFix.current.style.position = 'sticky';
         }
       } else {
         if (navBarFix.current) {
           navBarFix.current.style.top = '0';
-          navBarFix.current.style.position = 'fixed';
+          navBarFix.current.style.position = 'relative';
         }
       }
     });
+
+    console.log(navBarFix);
   }, []);
 
   return (
