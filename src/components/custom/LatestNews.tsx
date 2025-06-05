@@ -76,14 +76,42 @@ const LatestNews = () => {
             style={style.angledBox}
           ></div>
 
-          <Carousel className="grid place-items-center absolute top-[10%] md:top-1/5 w-fit md:-right-50">
-            <CarouselContent className="w-fit overflow-visible h-200 md:overflow-hidden">
+          <Carousel className="md:grid place-items-center absolute top-1/5 w-fit md:-right-50 hidden">
+            <CarouselContent className="w-fit">
+              {newses.map((e) => (
+                <CarouselItem
+                  className="grid place-items-center w-fit relative gap-10 md:gap-0"
+                  key={e.src}
+                >
+                  <div className="max-w-md absolute bg-white p-4 grid gap-5 top-20 left-30 z-100">
+                    <h1 className="text-[var(--promoblock-text-heading)]">
+                      {e.title}
+                    </h1>
+                    <p>{e.p}</p>
+                    <a href={e.link}>Learn More</a>
+                  </div>
+                  <img
+                    src={e.src}
+                    alt={e.src}
+                    loading="lazy"
+                    className="h-50 md:h-100"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="absolute -bottom-10">
+              <CarouselPrevious />
+              <CarouselNext />
+            </div>
+          </Carousel>
+          <Carousel className="grid place-items-center absolute top-[10%] md:top-1/5 w-fit md:-right-50 z-10 md:hidden">
+            <CarouselContent className="w-fit overflow-visible h-200 md:h-120 md:overflow-hidden">
               {newses.map((e) => (
                 <CarouselItem
                   className="grid place-items-center w-fit h-full relative gap-10 md:gap-0"
                   key={e.src}
                 >
-                  <div className="w-fit h-[20rem] md:h-0 mr-3 md:mr-0 md:max-w-md absolute bg-white p-4 grid gap-5 top-0 left-10 md:left-30 mt-30 md:mt-0 z-10">
+                  <div className="w-fit h-[20rem] md:h-fit mr-3 md:mr-0 md:max-w-md absolute bg-white p-4 grid gap-5 top-0 left-10 md:left-30 mt-30 md:mt-0 z-10">
                     <h1 className="text-[var(--promoblock-text-heading)]">
                       {e.title}
                     </h1>
@@ -99,7 +127,7 @@ const LatestNews = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute  md:-bottom-10 z-20">
+            <div className="absolute top-120 md:top-0 md:-bottom-10 z-20">
               <CarouselPrevious />
               <CarouselNext />
             </div>
