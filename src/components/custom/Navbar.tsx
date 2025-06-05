@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
+import { PiGreaterThanBold } from 'react-icons/pi';
 import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
 // import OutsideClickHandler from 'react-outside-click-handler';
 
@@ -11,11 +12,24 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
+  const menus = [
+    'Global Advisory',
+    'Wealth Management',
+    'Asset Management',
+    'Alternative Assets',
+    'About us',
+    'Corporate Sustainability',
+    'Careers',
+    'Newsroom',
+    'Simplified tender offer filed by Concordia',
+    'Contact us',
+  ];
+
   // window onLoad Entry
   const navBarFix = useRef<HTMLDivElement>(null);
   const header_section = useRef(null);
 
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener('load', () => {
@@ -61,17 +75,21 @@ const Navbar = () => {
           className="relative flex justify-center items-center px-6 md:px-12 py-4 max-w-7xl border-b-1 border-gray-200 bg-white/60 p-4 w-full h-20 m-auto lg:py-0.5"
         >
           <div
-            className={!isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
+            className={`cursor-pointer relative z-40 ${
+              !isNavMenuOpen ? `block` : 'hidden'
+            }`}
             onClick={() => {
-              setIsNavOpen((prev) => !prev);
+              setIsNavMenuOpen((prev) => !prev);
             }}
           >
             <RiMenu3Fill className="text-3xl rotate-180" />
           </div>
           <div
-            className={false ? `block lg:hidden` : 'hidden lg:hidden'}
+            className={`cursor-pointer relative z-40 ${
+              !isNavMenuOpen ? `hidden` : 'block text-[var(--footer-link)]'
+            }`}
             onClick={() => {
-              setIsNavOpen((prev) => !prev);
+              setIsNavMenuOpen(false);
             }}
           >
             <RiCloseFill className="text-3xl" />
@@ -108,12 +126,21 @@ const Navbar = () => {
         </nav>
       </motion.div>
 
-      {/* small screen */}
-      {/* <OutsideClickHandler
-        onOutsideClick={() => {
-          // setIsNavOpen(false);
-        }}
-      ></OutsideClickHandler> */}
+      <div
+        className={`transition-all grid place-items-start px-20 duration-300 fixed h-svh w-full bg-[var(--menu-bg)] text-white pt-25 z-10 ${
+          isNavMenuOpen ? 'top-0' : '-top-[100%]'
+        }`}
+      >
+        {menus.map((e) => (
+          <a
+            href=""
+            className="flex justify-between gap-10 items-center w-[400px] text-2xl"
+          >
+            {e}
+            <PiGreaterThanBold className="h-4 w-4" />
+          </a>
+        ))}
+      </div>
     </>
   );
 };
