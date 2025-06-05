@@ -92,7 +92,7 @@ const Navbar = () => {
                 <img
                   src="/images/navbar/rothschildandco_svg.svg"
                   alt="logo"
-                  className="w-60"
+                  className="w-50"
                   loading="lazy"
                 />
               </Link>
