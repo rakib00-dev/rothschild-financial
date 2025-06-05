@@ -68,7 +68,7 @@ const LatestNews = () => {
   return (
     <section className="w-full max-w-7xl mx-auto my-15 md:my-20 overflow-hidden">
       <div className="h-full w-full">
-        <h1 className="font-medium uppercase tracking-[2px] pb-15 grid place-items-center text-[#767474] text-sm">
+        <h1 className="font-medium uppercase tracking-[2px] pb-15 grid place-items-center text-[var(--title-gray)] text-sm">
           latest news
         </h1>
         <div className="relative w-full">

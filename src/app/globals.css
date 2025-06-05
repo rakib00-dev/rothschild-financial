@@ -6,6 +6,7 @@
   --primary-color: #efecea;
   --promoblock-text-heading: #2e3e80;
   --link-hover-color: #8a1e41;
+  --title-gray: #767474;
 }
 
 @theme inline {
@@ -27,6 +28,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: var(--promoblock-text-heading);
 }
 
 h2,
