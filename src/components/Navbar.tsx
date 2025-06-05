@@ -100,7 +100,7 @@ const Navbar = () => {
       if (scrollValue >= 82) {
         if (navBarFix.current) {
           navBarFix.current.style.top = '0';
-          navBarFix.current.style.position = 'sticky';
+          navBarFix.current.style.position = 'fixed';
         }
       } else {
         if (navBarFix.current) {
