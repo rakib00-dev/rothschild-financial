@@ -13,7 +13,7 @@ const ReusableArrowLink = ({
       className="transition-all duration-200 flex gap-2 items-center text-[var(--promoblock-text-heading)] linkHover"
       style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
     >
-      <FaGreaterThan className="h-2 transition-all duration-200 text-[var(--link-hover-color)]" />
+      <FaGreaterThan className="h-3 transition-all duration-200 text-[var(--link-hover-color)]" />
       {text}
     </a>
   );

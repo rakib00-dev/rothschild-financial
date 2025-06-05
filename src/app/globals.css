@@ -30,7 +30,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+h1,
+h2 {
   color: var(--promoblock-text-heading);
 }
 
