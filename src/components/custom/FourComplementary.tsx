@@ -21,19 +21,27 @@ const FourComplementary = () => {
       src: '/images/four-comple/rothschildandco-london-people-97-rt.jpg',
     },
   ];
+
   return (
     <section className="max-w-7xl w-full mx-auto">
       <div className="">
         <h2 className="text-center text-3xl text-[var(--promoblock-text-heading)]">
           Four complementary businesses
         </h2>
-        <div className="grid md:grid-cols-2">
+        <div className="grid  place-items-center md:grid-cols-2">
           {fourCompleItems.map((e) => (
             <div id="card" className="" key={e.title}>
-              <img src={e.src} alt={e.title} loading="lazy" />
-              <div>
+              <div className="grid place-items-center">
+                <img
+                  src={e.src}
+                  alt={e.title}
+                  loading="lazy"
+                  className="w-[30rem]"
+                />
+              </div>
+              <div className="absolute grid gap-5 max-w-sm p-8 bg-[var(--primary-color)]">
                 <h2>{e.title}</h2>
-                <p>{e.p}</p>
+                <p className="text-sm">{e.p}</p>
               </div>
             </div>
           ))}
