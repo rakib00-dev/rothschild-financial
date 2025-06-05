@@ -63,4 +63,17 @@ a {
 #card:nth-child(4) {
   @apply mb-40 md:mb-0;
 }
+
+#fourLink h2::after {
+  content: '';
+  @apply transition-all duration-300 flex justify-center items-center h-[2px] w-[0%] bg-[var(--link-hover-color)];
+}
+
+#fourLink h2:hover::after {
+  @apply w-[100%];
+}
+
+#fourLink h2:hover {
+  @apply text-[var(--link-hover-color)];
+}
 /* Four complementary - section ⬆️*/
