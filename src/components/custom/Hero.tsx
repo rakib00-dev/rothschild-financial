@@ -5,6 +5,7 @@ const Hero = () => {
       color: '#0b3055',
       clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0% 100%)',
       boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+      fontFamily: 'calluna, serif',
     },
   };
   return (
