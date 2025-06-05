@@ -127,14 +127,14 @@ const Navbar = () => {
       </motion.div>
 
       <div
-        className={`transition-all grid place-items-start px-20 duration-300 fixed h-svh w-full bg-[var(--menu-bg)] text-white pt-25 z-10 ${
+        className={`transition-all grid place-items-start px-4 md:px-20 duration-300 fixed h-svh w-full bg-[var(--menu-bg)] text-white pt-25 z-10 ${
           isNavMenuOpen ? 'top-0' : '-top-[100%]'
         }`}
       >
         {menus.map((e) => (
           <a
             href=""
-            className="flex justify-between gap-10 items-center w-[400px] text-2xl"
+            className="flex justify-between gap-10 items-center w-[400px] md:text-2xl"
           >
             {e}
             <PiGreaterThanBold className="h-4 w-4" />
