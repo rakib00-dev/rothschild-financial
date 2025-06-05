@@ -20,7 +20,7 @@ const Hero = () => {
       >
         <div className="absolute -bottom-10 left-5 md:left-15">
           <h1
-            className="angled-box text-lg w-4/5 max-w-xs p-4 md:text-4xl md:max-w-lg md:p-8"
+            className=" text-lg w-4/5 max-w-xs p-4 md:text-4xl md:max-w-lg md:p-8"
             style={style.angledBox}
           >
             One of the world&apos;s largest independent financial services
