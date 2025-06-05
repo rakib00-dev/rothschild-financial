@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   title: 'Rothschild & Co',
   description:
     'Rothschild & Co is one of the world’s largest independent financial advisory groups, employing 4,200 people in over 40 countries across the world, delivering a unique global perspective across four market-leading business divisions; Global Advisory, Asset Management, Wealth Management and Merchant Banking.',
+  keywords:
+    'Global Advisory,Wealth Management,Asset Management,Trusts,Private Wealth,Private Banking,Merchant Banking',
 };
 
 export default function RootLayout({
