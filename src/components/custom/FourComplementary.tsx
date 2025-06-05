@@ -24,11 +24,11 @@ const FourComplementary = () => {
 
   return (
     <section className="max-w-7xl w-full mx-auto">
-      <div className="">
-        <h2 className="text-center text-3xl text-[var(--promoblock-text-heading)]">
+      <div className="mx-2 md:mx-35">
+        <h2 className="text-center mb-14 text-3xl text-[var(--promoblock-text-heading)]">
           Four complementary businesses
         </h2>
-        <div className="grid  place-items-center md:grid-cols-2">
+        <div className="grid gap-10 place-items-center md:grid-cols-2">
           {fourCompleItems.map((e) => (
             <div id="card" className="" key={e.title}>
               <div className="grid place-items-center">
