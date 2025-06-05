@@ -12,7 +12,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto w-full mb-40">
+    <section className="max-w-7xl mx-auto w-full mb-30 md:mb-40">
       <div className="flex justify-center items-center flex-col md:flex-row">
         <a
           href="https://www.rothschildandco.com/en/contact-us/"

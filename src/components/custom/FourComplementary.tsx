@@ -27,7 +27,7 @@ const FourComplementary = () => {
   ];
 
   return (
-    <section className="max-w-7xl w-full mx-auto mb-60">
+    <section className="max-w-7xl w-full mx-auto mb-30 md:mb-60">
       <div className="mx-2 md:mx-35">
         <h2 className="text-center mb-14 text-3xl text-[var(--promoblock-text-heading)]">
           Four complementary businesses
