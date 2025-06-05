@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { FaGreaterThan } from 'react-icons/fa';
 
 const LatestNews = () => {
   const newses = [
@@ -84,11 +85,20 @@ const LatestNews = () => {
                   key={e.src}
                 >
                   <div className="max-w-md absolute bg-white p-4 grid gap-5 top-20 left-30 z-100">
-                    <h1 className="text-[var(--promoblock-text-heading)]">
-                      {e.title}
-                    </h1>
+                    <a href={e.link} className="md:text-xl text-lg ">
+                      <h1 className="text-[var(--promoblock-text-heading)] hoverTextAnimation">
+                        {e.title}
+                      </h1>
+                    </a>
                     <p>{e.p}</p>
-                    <a href={e.link}>Learn More</a>
+                    <a
+                      href={e.link}
+                      className="transition-all duration-200 flex gap-2 items-center text-[var(--promoblock-text-heading)] linkHover"
+                      style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+                    >
+                      <FaGreaterThan className="h-2 transition-all duration-200 text-[var(--link-hover-color)]" />
+                      Read More
+                    </a>
                   </div>
                   <img
                     src={e.src}
@@ -116,7 +126,14 @@ const LatestNews = () => {
                       {e.title}
                     </h1>
                     <p>{e.p}</p>
-                    <a href={e.link}>Learn More</a>
+                    <a
+                      href={e.link}
+                      className="flex text-[var(--promoblock-text-heading)]"
+                      style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+                    >
+                      <FaGreaterThan />
+                      Read More
+                    </a>
                   </div>
                   <img
                     src={e.src}
