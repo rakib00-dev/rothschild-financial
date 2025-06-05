@@ -23,7 +23,8 @@ const Hero = () => {
             className="angled-box text-lg w-4/5 max-w-xs p-4 md:text-4xl md:max-w-lg md:p-8"
             style={style.angledBox}
           >
-            One of the world's largest independent financial services groups
+            One of the world&apos;s largest independent financial services
+            groups
           </h1>
         </div>
       </div>
