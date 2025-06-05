@@ -17,7 +17,7 @@ export default function Home() {
       <FourComplementary />
       <ContactUs />
       <CorporateSustain />
-      <AboutUs />
+      {/* <AboutUs /> */}
       <div className="mt-[80rem]"></div>
     </>
   );
