@@ -35,14 +35,17 @@ const FourComplementary = () => {
         <div className="grid gap-10 place-items-center md:grid-cols-2">
           {fourCompleItems.map((e) => (
             <div id="card" className="relative" key={e.title}>
-              <div className="grid place-items-center">
+              <a
+                href={e.link}
+                className="grid  overflow-hidden place-items-center"
+              >
                 <img
                   src={e.src}
                   alt={e.title}
                   loading="lazy"
-                  className="w-[30rem]"
+                  className="transition-all duration-300 w-[30rem] hover:scale-110"
                 />
-              </div>
+              </a>
               <div className="mb-20 mx-4 md:left-4 top-[90%] absolute grid gap-5 max-w-sm p-8 bg-[var(--primary-color)] z-10">
                 <a id="fourLink" href={e.link}>
                   <h2 className="text-2xl text-[var(--promoblock-text-heading)]">
