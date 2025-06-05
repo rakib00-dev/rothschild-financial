@@ -4,6 +4,7 @@ import WorksText from '@/components/custom/WorksText';
 import LatestNews from '@/components/custom/LatestNews';
 import FourComplementary from '@/components/custom/FourComplementary';
 import ContactUs from '@/components/custom/ContactUs';
+import CorporateSustain from '@/components/custom/CorporateSustain';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <LatestNews />
       <FourComplementary />
       <ContactUs />
+      <CorporateSustain />
       <div className="mt-[80rem]"></div>
     </>
   );
