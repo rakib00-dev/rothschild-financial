@@ -85,7 +85,11 @@ const LatestNews = () => {
                   key={e.src}
                 >
                   <div className="max-w-md absolute bg-white p-4 grid gap-5 top-20 left-30 z-100">
-                    <a href={e.link} className="md:text-xl text-lg ">
+                    <a
+                      target="_blank"
+                      href={e.link}
+                      className="md:text-xl text-lg "
+                    >
                       <h1 className="text-[var(--promoblock-text-heading)] hoverTextAnimation">
                         {e.title}
                       </h1>

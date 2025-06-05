@@ -47,7 +47,7 @@ const FourComplementary = () => {
                 />
               </a>
               <div className="mb-20 mx-4 md:left-4 top-[90%] absolute grid gap-5 max-w-sm p-8 bg-[var(--primary-color)] z-10">
-                <a id="fourLink" href={e.link}>
+                <a target="_blank" id="fourLink" href={e.link}>
                   <h2 className="text-2xl text-[var(--promoblock-text-heading)]">
                     {e.title}
                   </h2>

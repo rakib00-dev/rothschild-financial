@@ -10,6 +10,7 @@ const ReusableArrowLink = ({
   return (
     <a
       href={link}
+      target="_blank"
       className="transition-all duration-200 flex gap-2 items-center text-[var(--promoblock-text-heading)] linkHover"
       style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
     >

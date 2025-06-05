@@ -1,3 +1,4 @@
+import { FaRegFilePdf } from 'react-icons/fa';
 import ReusableArrowLink from './ReusableArrowLink';
 
 const AboutUs = () => {
@@ -40,7 +41,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto w-full mb-40">
+    <section className="max-w-7xl mx-auto w-full mb-40 overflow-hidden">
       <div className="flex justify-center items-center flex-col md:flex-row">
         <a
           href="https://www.rothschildandco.com/en/contact-us/"
@@ -73,18 +74,28 @@ const AboutUs = () => {
           />
         </div>
       </div>
-      <div>
+      <div className="mt-10 flex flex-wrap justify-center items-center gap-5 w-full ">
         {aboutUsCards.map((e) => (
-          <div id="card" className="relative" key={e.title}>
-            <div className="mb-20 mx-4 md:left-4 top-[90%] absolute grid gap-5 max-w-sm p-8 bg-[var(--primary-color)] z-10">
-              <a id="fourLink" href={e.link}>
-                <h2 className="text-2xl text-[var(--promoblock-text-heading)]">
-                  {e.title}
-                </h2>
+          <div className="grid gap-5 h-[13rem] w-[30rem] p-8 bg-[var(--primary-color)] z-10">
+            <a target="_blank" id="fourLink" href={e.link}>
+              <h2 className="text-2xl text-[var(--promoblock-text-heading)]">
+                {e.title}
+              </h2>
+            </a>
+            <p className="text-sm">{e.p}</p>
+            {e.title == 'Clarification' ? (
+              <a
+                href={e.link}
+                target="_blank"
+                className="transition-all duration-200 flex gap-2 items-center text-[var(--promoblock-text-heading)] linkHover"
+                style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+              >
+                <FaRegFilePdf className="h-4 transition-all duration-200 text-[var(--link-hover-color)]" />
+                {e.linkText}
               </a>
-              <p className="text-sm">{e.p}</p>
+            ) : (
               <ReusableArrowLink link={e.link} text={e.linkText} />
-            </div>
+            )}
           </div>
         ))}
       </div>
