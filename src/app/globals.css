@@ -7,6 +7,7 @@
   --promoblock-text-heading: #2e3e80;
   --link-hover-color: #8a1e41;
   --title-gray: #767474;
+  --footer-link: #cc9f53;
 }
 
 @theme inline {
@@ -78,3 +79,23 @@ a {
   @apply text-[var(--link-hover-color)];
 }
 /* Four complementary - section ⬆️*/
+
+/* footer section ⬇️ */
+.linkAnimation {
+  @apply transition-all duration-300;
+}
+
+.linkAnimation::after {
+  content: '';
+  @apply flex justify-center items-center h-0.5 transition-all w-[0%] bg-[var(--footer-link)] duration-300;
+}
+
+.linkAnimation:hover::after {
+  @apply w-[100%];
+}
+
+.linkAnimation:hover {
+  @apply text-[var(--footer-link)];
+}
+
+/* footer section ⬆️ */

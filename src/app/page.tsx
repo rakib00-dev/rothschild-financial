@@ -6,6 +6,7 @@ import FourComplementary from '@/components/custom/FourComplementary';
 import ContactUs from '@/components/custom/ContactUs';
 import CorporateSustain from '@/components/custom/CorporateSustain';
 import AboutUs from '@/components/custom/AboutUs';
+import Footer from '@/components/custom/Footer';
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
       <ContactUs />
       <CorporateSustain />
       <AboutUs />
-      <div className="mt-[80rem]"></div>
+      <Footer />
+      {/* <div className="mt-[80rem]"></div> */}
     </>
   );
 }

@@ -1,0 +1,97 @@
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+
+const Footer = () => {
+  const fooerLink = [
+    {
+      linkTitle: 'Alumni Network',
+      link: 'https://www.rothschildandco.com/en/alumni-network/',
+    },
+    {
+      linkTitle: 'Contact us',
+      link: 'https://www.rothschildandco.com/en/contact-us/',
+    },
+    {
+      linkTitle: 'Data Privacy Notice',
+      link: 'https://www.rothschildandco.com/en/data-privacy-notice/',
+    },
+    {
+      linkTitle: 'Legal and regulatory',
+      link: 'https://www.rothschildandco.com/en/legal-information/',
+    },
+    {
+      linkTitle: 'Modern Slavery Act Statement',
+      link: 'https://www.rothschildandco.com/en/legal/modern-slavery-statement/',
+    },
+    {
+      linkTitle: 'The NMR Pension Fund',
+      link: 'https://www.rothschildandco.com/en/legal/nmr-pension-fund/',
+    },
+    {
+      linkTitle: 'Regulated information',
+      link: 'https://www.rothschildandco.com/en/newsroom/financial-reports/',
+    },
+    {
+      linkTitle: 'Site map',
+      link: 'https://www.rothschildandco.com/en/site-map/',
+    },
+    {
+      linkTitle: 'Simplified tender offer filed by Concordia',
+      link: 'https://www.rothschildandco.com/en/simplified-tender-offer-filed-by-concordia/',
+    },
+    {
+      linkTitle: 'Cookie Settings',
+      link: '',
+    },
+  ];
+  return (
+    <footer className="max-w-7xl mx-auto w-full bg-[#1c355e] text-white">
+      <div className="grid grid-cols-2 w-full px-2 py-15 md:px-25">
+        <div className="grid grid-cols-2 gap-20">
+          <div className="grid gap-6">
+            {fooerLink.slice(0, 5).map((e) => (
+              <div className="">
+                <a
+                  href={e.link}
+                  target="_blank"
+                  className="w-full text-md text-gray-200 linkAnimation"
+                  style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+                >
+                  {e.linkTitle}
+                </a>
+              </div>
+            ))}
+          </div>
+          <div className="grid gap-6">
+            {fooerLink.slice(5, 10).map((e) => (
+              <div>
+                <a
+                  href={e.link}
+                  target="_blank"
+                  className="w-full text-md text-gray-200"
+                  style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
+                >
+                  {e.linkTitle}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex justify-end gap-8">
+          <a href="" target="_blank" className="w-fit h-fit p-2">
+            <FaInstagram className="h-5 w-5" />
+          </a>
+          <a href="" target="_blank" className="w-fit h-fit p-2">
+            <FaLinkedinIn className="h-5 w-5" />
+          </a>
+        </div>
+      </div>
+      <div className="grid w-full px-2 py-8 text-end md:px-25 bg-[#162a4b]">
+        <span className="text-sm">
+          {new Date().getFullYear()} Rothschild & Co ©
+        </span>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
