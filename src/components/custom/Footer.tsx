@@ -45,8 +45,8 @@ const Footer = () => {
   ];
   return (
     <footer className="max-w-7xl mx-auto w-full bg-[#1c355e] text-white">
-      <div className="grid grid-cols-2 w-full px-2 py-15 md:px-25">
-        <div className="grid grid-cols-2 gap-20">
+      <div className="grid md:grid-cols-2 w-full px-4 pt-15 pb-5 md:pb-15 md:px-25">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-20">
           <div className="grid gap-6">
             {fooerLink.slice(0, 5).map((e) => (
               <div className="">
@@ -76,7 +76,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-8">
+        <div className="flex md:justify-end mt-12 md:mt-0 gap-8">
           <a
             href=""
             target="_blank"
@@ -93,7 +93,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="grid w-full px-2 py-8 text-end md:px-25 bg-[#162a4b]">
+      <div className="grid w-full px-4 py-8 md:text-end md:px-25 bg-[#162a4b]">
         <span className="text-sm">
           {new Date().getFullYear()} Rothschild & Co ©
         </span>
