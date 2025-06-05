@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
-import { FaChevronDown } from 'react-icons/fa';
+import React, { useEffect, useRef } from 'react';
 import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
 // import OutsideClickHandler from 'react-outside-click-handler';
 
