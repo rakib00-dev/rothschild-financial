@@ -4,7 +4,7 @@ const Hero = () => {
       <img
         src="/images/hero/rothschildandco-london-buildings-38-hr.jpg"
         alt=""
-        className="px-10"
+        className="md:px-10 px-3"
       />
     </section>
   );

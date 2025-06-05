@@ -147,10 +147,7 @@ const Navbar = () => {
             </div>
           </ul>
 
-          <div
-            id="menu"
-            className="hidden justify-center items-center w-full lg:flex"
-          >
+          <div id="menu" className=" justify-center items-center w-full flex">
             <div
               id="logo"
               className="text-md font-medium w-32 md:w-64 md:text-lg"
@@ -171,7 +168,10 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div id="language" className="flex gap-1 font-bold cursor-pointer">
+          <div
+            id="language"
+            className="lg:flex gap-1 font-bold cursor-pointer hidden"
+          >
             EN
           </div>
         </nav>
