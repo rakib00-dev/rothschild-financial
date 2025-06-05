@@ -74,9 +74,9 @@ const AboutUs = () => {
           />
         </div>
       </div>
-      <div className="mt-10 flex flex-wrap justify-center items-center gap-5 w-full ">
+      <div className=" mt-10 flex flex-wrap justify-center items-center gap-5 w-full ">
         {aboutUsCards.map((e) => (
-          <div className="grid gap-5 h-[13rem] w-[30rem] p-8 bg-[var(--primary-color)] z-10">
+          <div className="mx-4 grid gap-5 h-[16rem] md:h-[13rem] w-[30rem] p-8 bg-[var(--primary-color)] z-10">
             <a target="_blank" id="fourLink" href={e.link}>
               <h2 className="text-2xl text-[var(--promoblock-text-heading)]">
                 {e.title}
