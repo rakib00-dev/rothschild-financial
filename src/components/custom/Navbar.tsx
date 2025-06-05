@@ -5,87 +5,18 @@ import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
-import OutsideClickHandler from 'react-outside-click-handler';
-// import { Link, Hrehref, useLocation } from 'react-router-dom';
+// import OutsideClickHandler from 'react-outside-click-handler';
 
 const Navbar = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
 
-  // const location = useLocation();
-
-  const [isHovered, setIsHovered] = useState(false);
-  const [isResourceHovered, setIsResourceHovered] = useState(false);
-
-  // large screen nav list
-  const NavLists = () => {
-    return (
-      <>
-        <Link
-          href={'#'}
-          className={
-            'capitalize flex justify-start items-center gap-2 text-sm sm:font-bold'
-          }
-          onMouseOver={() => setIsHovered(true)}
-          onMouseOut={() => setIsHovered(false)}
-          onClick={() => setIsHovered((prev) => !prev)}
-          style={{ color: '#0b3558' }}
-        >
-          solutions{' '}
-          <FaChevronDown
-            className={
-              isHovered ? `rotate-180 transition-all` : 'transition-all'
-            }
-          />
-        </Link>
-        <Link
-          href="/our-work"
-          className={
-            'capitalize flex justify-start items-center gap-2 text-sm sm:font-bold'
-          }
-          onClick={() => {
-            scrollToTop();
-          }}
-        >
-          our work
-        </Link>
-        <Link
-          href="/pricing"
-          className={'capitalize  text-sm sm:font-bold'}
-          onClick={() => scrollToTop()}
-        >
-          pricing
-        </Link>
-        <Link
-          href="#"
-          className={
-            'capitalize  flex justify-start items-center gap-2  text-sm sm:font-bold'
-          }
-          onMouseOver={() => setIsResourceHovered(true)}
-          onMouseOut={() => setIsResourceHovered(false)}
-          onClick={() => setIsResourceHovered((prev) => !prev)}
-          style={{ color: '#0b3558' }}
-        >
-          resources{' '}
-          <FaChevronDown
-            className={
-              isResourceHovered ? `rotate-180 transition-all` : 'transition-all'
-            }
-          />
-        </Link>
-        <Link href="/contact" className={'capitalize  text-sm sm:font-bold'}>
-          contact
-        </Link>
-      </>
-    );
-  };
-
   // window onLoad Entry
   const navBarFix = useRef<HTMLDivElement>(null);
   const header_section = useRef(null);
 
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  // const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener('load', () => {
