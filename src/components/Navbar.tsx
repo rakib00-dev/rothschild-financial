@@ -122,7 +122,7 @@ const Navbar = () => {
           delay: 0.2,
           type: 'spring',
         }}
-        className={`mx-auto transition-all bg-white/60 w-full h-20 top-5 border-b-1 border-gray-200 z-20 `}
+        className={`mx-auto transition-all bg-white w-full h-20 top-5 border-b-1 border-gray-200 z-20 `}
         id="navBarFix"
         ref={navBarFix}
       >

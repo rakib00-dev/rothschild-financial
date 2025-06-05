@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section>
+    <section className="mt-0">
       <img
         src="/images/hero/rothschildandco-london-buildings-38-hr.jpg"
         alt=""
