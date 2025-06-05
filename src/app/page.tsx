@@ -5,6 +5,7 @@ import LatestNews from '@/components/custom/LatestNews';
 import FourComplementary from '@/components/custom/FourComplementary';
 import ContactUs from '@/components/custom/ContactUs';
 import CorporateSustain from '@/components/custom/CorporateSustain';
+import AboutUs from '@/components/custom/AboutUs';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <FourComplementary />
       <ContactUs />
       <CorporateSustain />
+      <AboutUs />
       <div className="mt-[80rem]"></div>
     </>
   );
