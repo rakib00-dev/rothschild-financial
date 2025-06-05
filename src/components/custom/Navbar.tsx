@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
 // import OutsideClickHandler from 'react-outside-click-handler';
 
@@ -15,7 +15,7 @@ const Navbar = () => {
   const navBarFix = useRef<HTMLDivElement>(null);
   const header_section = useRef(null);
 
-  // const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener('load', () => {
@@ -60,22 +60,22 @@ const Navbar = () => {
           id="nav"
           className="relative flex justify-center items-center px-6 md:px-12 py-4 max-w-7xl border-b-1 border-gray-200 bg-white/60 p-4 w-full h-20 m-auto lg:py-0.5"
         >
-          <ul className="flex justify-center mx-auto items-center gap-5">
-            <div
-              // className={!isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
-              onClick={() => {
-                // setIsNavOpen((prev) => !prev);
-              }}
-            >
-              <RiMenu3Fill className="text-3xl rotate-180" />
-            </div>
-            <div
-              className={false ? `block lg:hidden` : 'hidden lg:hidden'}
-              onClick={() => {}}
-            >
-              <RiCloseFill className="text-3xl" />
-            </div>
-          </ul>
+          <div
+            className={!isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
+            onClick={() => {
+              setIsNavOpen((prev) => !prev);
+            }}
+          >
+            <RiMenu3Fill className="text-3xl rotate-180" />
+          </div>
+          <div
+            className={false ? `block lg:hidden` : 'hidden lg:hidden'}
+            onClick={() => {
+              setIsNavOpen((prev) => !prev);
+            }}
+          >
+            <RiCloseFill className="text-3xl" />
+          </div>
 
           <div id="menu" className=" justify-center items-center w-full flex">
             <div
@@ -98,6 +98,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
+
           <div
             id="language"
             className="lg:flex gap-1 font-bold cursor-pointer hidden"

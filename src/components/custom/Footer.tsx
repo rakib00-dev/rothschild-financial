@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 gap-6 md:gap-20">
           <div className="grid gap-6">
             {fooerLink.slice(0, 5).map((e) => (
-              <div className="">
+              <div className="" key={e.link}>
                 <a
                   href={e.link}
                   target="_blank"
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
           <div className="grid gap-6">
             {fooerLink.slice(5, 10).map((e) => (
-              <div>
+              <div key={e.link}>
                 <a
                   href={e.link}
                   target="_blank"
