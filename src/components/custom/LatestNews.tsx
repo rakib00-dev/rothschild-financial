@@ -115,7 +115,7 @@ const LatestNews = () => {
             </div>
           </Carousel>
           <Carousel className="grid place-items-center absolute top-[10%] md:top-1/5 w-fit md:-right-50 z-10 md:hidden">
-            <CarouselContent className="w-fit overflow-visible h-200 md:h-120 md:overflow-hidden">
+            <CarouselContent className="w-fit overflow-visible h-180 md:overflow-hidden">
               {newses.map((e) => (
                 <CarouselItem
                   className="grid place-items-center w-fit h-full relative gap-10 md:gap-0"
@@ -128,10 +128,10 @@ const LatestNews = () => {
                     <p>{e.p}</p>
                     <a
                       href={e.link}
-                      className="flex text-[var(--promoblock-text-heading)]"
+                      className="transition-all duration-200 flex gap-2 items-center text-[var(--promoblock-text-heading)] linkHover"
                       style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}
                     >
-                      <FaGreaterThan />
+                      <FaGreaterThan className="h-2 transition-all duration-200 text-[var(--link-hover-color)]" />
                       Read More
                     </a>
                   </div>

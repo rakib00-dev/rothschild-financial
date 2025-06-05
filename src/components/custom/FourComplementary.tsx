@@ -30,7 +30,7 @@ const FourComplementary = () => {
         </h2>
         <div className="grid gap-10 place-items-center md:grid-cols-2">
           {fourCompleItems.map((e) => (
-            <div id="card" className="" key={e.title}>
+            <div id="card" className="relative" key={e.title}>
               <div className="grid place-items-center">
                 <img
                   src={e.src}
@@ -39,8 +39,10 @@ const FourComplementary = () => {
                   className="w-[30rem]"
                 />
               </div>
-              <div className="absolute grid gap-5 max-w-sm p-8 bg-[var(--primary-color)]">
-                <h2>{e.title}</h2>
+              <div className="mb-20 mx-4 md:left-4 top-[90%] absolute grid gap-5 max-w-sm p-8 bg-[var(--primary-color)] z-10">
+                <h2 className="text-2xl text-[var(--promoblock-text-heading)]">
+                  {e.title}
+                </h2>
                 <p className="text-sm">{e.p}</p>
               </div>
             </div>

@@ -41,17 +41,26 @@ a {
 }
 
 .hoverTextAnimation {
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
+  @apply transition-all duration-300;
 }
 
 .hoverTextAnimation:hover {
-  text-decoration: underline;
-  color: var(--link-hover-color);
+  @apply underline  text-[var(--link-hover-color)];
 }
 
 .linkHover:hover svg,
 .linkHover:hover {
-  transform: translateX(10px);
-  color: var(--link-hover-color);
+  @apply translate-x-2.5 text-[var(--link-hover-color)];
 }
+
+/* Four complementary - section ⬇️*/
+#card:nth-child(1),
+#card:nth-child(2) {
+  @apply mb-40;
+}
+
+#card:nth-child(3),
+#card:nth-child(4) {
+  @apply mb-40 md:mb-0;
+}
+/* Four complementary - section ⬆️*/
