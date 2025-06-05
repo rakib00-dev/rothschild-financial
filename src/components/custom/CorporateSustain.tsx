@@ -2,7 +2,7 @@ import ReusableArrowLink from './ReusableArrowLink';
 
 const CorporateSustain = () => {
   return (
-    <section className="relative h-[500px] bg-[url(/images/corporate-sustain/rothschildandco-london-buildings-23.jpg)] bg-fixed">
+    <section className="relative mb-120 md:mb-40 h-[500px] bg-[url(/images/corporate-sustain/rothschildandco-london-buildings-23.jpg)] bg-fixed">
       <div className="hidden md:grid gap-5 bg-[var(--primary-color)] p-10 w-md absolute right-35 -top-10">
         <h2 className="text-2xl">Corporate Sustainability</h2>
         <p>

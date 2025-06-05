@@ -11,32 +11,82 @@ const AboutUs = () => {
     },
   };
 
+  const aboutUsCards = [
+    {
+      title: 'News and Insights',
+      p: 'Visit the Newsroom for our latest News, Insights and other publications.',
+      link: 'https://www.rothschildandco.com/en/newsroom/',
+      linkText: 'Enter the Newsroom',
+    },
+    {
+      title: 'Careers at Rothschild & Co',
+      p: 'We place emphasis on finding the right colleagues to take our business forward, and just as much on their fulfilment and wellbeing once they join us.',
+      link: 'https://bit.ly/3R55Uz2',
+      linkText: 'Search jobs',
+    },
+    {
+      title: 'General Meeting of Shareholders',
+      p: 'Find out more on the Rothschild & Co General Meeting of Shareholders.',
+      link: 'https://www.rothschildandco.com/en/about-us/shareholders/agm/',
+      linkText:
+        'Visit the Rothschild & Co General Meeting of Shareholders page',
+    },
+    {
+      title: 'Clarification',
+      p: 'Clarification on unregulated fundraising schemes.',
+      link: 'https://www.rothschildandco.com/siteassets/publications/rothschildandco/group/2018/en_rco_2018_cryptocurrencies.pdf',
+      linkText: 'Cryptocurrencies',
+    },
+  ];
+
   return (
     <section className="max-w-7xl mx-auto w-full mb-40">
       <div className="flex justify-center items-center flex-col md:flex-row">
-        <div style={style.angledBox} className="md:w-1/2">
+        <a
+          href="https://www.rothschildandco.com/en/contact-us/"
+          style={style.angledBox}
+          className="md:w-1/2"
+        >
           <img
             src="/images/contact-us/rothschildandco-london-buildings-16.jpg"
-            alt=""
+            alt="rothschildandco-london-buildings-16.jpg"
             loading="lazy"
+            className="transition-all duration-300 hover:scale-105"
           />
-        </div>
+        </a>
         <div className="grid gap-5 md:place-items-start w-full p-5 md:w-1/2 ">
           <a
             id="fourLink"
             href="https://www.rothschildandco.com/en/contact-us/"
+            className="text-2xl md:text-4xl"
           >
-            <h2 className="text-2xl">Contact us</h2>
+            <h2 className="">About us</h2>
           </a>
           <p>
-            With 4,600 talented professionals in over 40 countries we can assist
-            you wherever you, your business or your assets are located
+            We are a leading global financial services group, with seven
+            generations of family control and a history of over 200 years at the
+            centre of the world's financial markets.
           </p>
           <ReusableArrowLink
             link="https://www.rothschildandco.com/en/contact-us/"
-            text="Find your local office"
+            text="Learn more"
           />
         </div>
+      </div>
+      <div>
+        {aboutUsCards.map((e) => (
+          <div id="card" className="relative" key={e.title}>
+            <div className="mb-20 mx-4 md:left-4 top-[90%] absolute grid gap-5 max-w-sm p-8 bg-[var(--primary-color)] z-10">
+              <a id="fourLink" href={e.link}>
+                <h2 className="text-2xl text-[var(--promoblock-text-heading)]">
+                  {e.title}
+                </h2>
+              </a>
+              <p className="text-sm">{e.p}</p>
+              <ReusableArrowLink link={e.link} text={e.linkText} />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

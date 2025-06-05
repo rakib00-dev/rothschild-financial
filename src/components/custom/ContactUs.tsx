@@ -14,19 +14,25 @@ const ContactUs = () => {
   return (
     <section className="max-w-7xl mx-auto w-full mb-40">
       <div className="flex justify-center items-center flex-col md:flex-row">
-        <div style={style.angledBox} className="md:w-1/2">
+        <a
+          href="https://www.rothschildandco.com/en/contact-us/"
+          style={style.angledBox}
+          className="md:w-1/2"
+        >
           <img
             src="/images/contact-us/rothschildandco-london-buildings-16.jpg"
-            alt=""
+            alt="rothschildandco-london-buildings-16.jpg"
             loading="lazy"
+            className="transition-all duration-300 hover:scale-105"
           />
-        </div>
+        </a>
         <div className="grid gap-5 md:place-items-start w-full p-5 md:w-1/2 ">
           <a
             id="fourLink"
             href="https://www.rothschildandco.com/en/contact-us/"
+            className="text-2xl md:text-4xl"
           >
-            <h2 className="text-2xl">Contact us</h2>
+            <h2 className="">Contact us</h2>
           </a>
           <p>
             With 4,600 talented professionals in over 40 countries we can assist
