@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import { PiGreaterThanBold } from 'react-icons/pi';
@@ -129,7 +130,7 @@ const Navbar = () => {
                   scrollToTop();
                 }}
               >
-                <img
+                <Image
                   src="/images/navbar/rothschildandco_svg.svg"
                   alt="logo"
                   className="w-50"

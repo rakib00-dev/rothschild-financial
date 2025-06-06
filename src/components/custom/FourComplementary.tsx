@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const FourComplementary = () => {
   const fourCompleItems = [
     {
@@ -39,7 +41,7 @@ const FourComplementary = () => {
                 href={e.link}
                 className="grid  overflow-hidden place-items-center"
               >
-                <img
+                <Image
                   src={e.src}
                   alt={e.title}
                   loading="lazy"

@@ -1,5 +1,6 @@
 import { FaRegFilePdf } from 'react-icons/fa';
 import ReusableArrowLink from './ReusableArrowLink';
+import Image from 'next/image';
 
 const AboutUs = () => {
   const style = {
@@ -48,7 +49,7 @@ const AboutUs = () => {
           style={style.angledBox}
           className="md:w-1/2"
         >
-          <img
+          <Image
             src="/images/contact-us/rothschildandco-london-buildings-16.jpg"
             alt="rothschildandco-london-buildings-16.jpg"
             loading="lazy"
