@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Image from 'next/image';
 import { FaGreaterThan } from 'react-icons/fa';
 
 const LatestNews = () => {
@@ -104,7 +105,7 @@ const LatestNews = () => {
                       Read More
                     </a>
                   </div>
-                  <img
+                  <Image
                     src={e.src}
                     alt={e.src}
                     loading="lazy"
@@ -139,7 +140,7 @@ const LatestNews = () => {
                       Read More
                     </a>
                   </div>
-                  <img
+                  <Image
                     src={e.src}
                     alt={e.src}
                     loading="lazy"

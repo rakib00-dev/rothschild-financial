@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ReusableArrowLink from './ReusableArrowLink';
 
 const ContactUs = () => {
@@ -19,7 +20,7 @@ const ContactUs = () => {
           style={style.angledBox}
           className="md:w-1/2"
         >
-          <img
+          <Image
             src="/images/contact-us/rothschildandco-london-buildings-16.jpg"
             alt="rothschildandco-london-buildings-16.jpg"
             loading="lazy"
