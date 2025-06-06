@@ -67,7 +67,7 @@ const AboutUs = () => {
           <p>
             We are a leading global financial services group, with seven
             generations of family control and a history of over 200 years at the
-            centre of the world's financial markets.
+            centre of the world&apos;s financial markets.
           </p>
           <ReusableArrowLink
             link="https://www.rothschildandco.com/en/contact-us/"
